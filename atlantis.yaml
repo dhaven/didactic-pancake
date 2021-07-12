@@ -2,6 +2,7 @@ version: 3
 projects:
 - workflow: my-workflow
   name: my-project-name
+  terraform_version: 0.14.7
   dir: .
 workflows:
   my-workflow:
