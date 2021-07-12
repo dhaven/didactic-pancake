@@ -1,0 +1,12 @@
+version: 3
+projects:
+- workflow: my-workflow
+  name: my-project-name
+  dir: .
+workflows:
+  my-workflow:
+    plan:
+      steps:
+      - init
+      - plan
+      - run: "/home/atlantis/.atlantis/bin/terraform0.14.7 show -no-color -json $PLANFILE"
