@@ -2,6 +2,7 @@ version: 3
 projects:
 - workflow: my-workflow
   name: my-project-name
+  terraform_version: 0.14.7
   dir: .
 workflows:
   my-workflow:
@@ -9,4 +10,4 @@ workflows:
       steps:
       - init
       - plan
-      - run: "terraform show -no-color -json $PLANFILE"
+      - run: "/home/atlantis/.atlantis/bin/terraform0.14.7 show -no-color -json $PLANFILE"
