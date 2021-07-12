@@ -9,4 +9,4 @@ workflows:
       steps:
       - init
       - plan
-      - run: "/home/atlantis/.atlantis/bin/terraform0.14.7 show -no-color -json $PLANFILE"
+      - run: "terraform show -no-color -json $PLANFILE"
